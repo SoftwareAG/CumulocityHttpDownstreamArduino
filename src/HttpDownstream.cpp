@@ -24,8 +24,8 @@ void HttpDownstreamClient::base64(char* username, char* password) {
   int encodedLength = Base64.encodedLength(inputStringLength);
   char encodedString[encodedLength];
   Base64.encode(encodedString, temp, inputStringLength);
-  Serial.print("Encoded string is: ");
-  Serial.println(encodedString);
+  //Serial.print("Encoded string is: ");
+  //Serial.println(encodedString);
   //Memory allocation
   if (_base64) free (_base64);
   _base64 = (char*) malloc(sizeof(char) * strlen(encodedString));
@@ -140,7 +140,7 @@ void HttpDownstreamClient::tokenCreate(char* URL, char* Subname, char* Suber, in
   String body2send = "";
 
   serializeJsonPretty(root, body2send);
-  Serial.println(body2send);
+  //Serial.println(body2send);
   Serial.println("Start to connect to the server!");
   if (_networkClient->connect(URL, 443)) {
     Serial.println("Connected to the server");
