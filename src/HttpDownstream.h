@@ -3,7 +3,7 @@
 #define HttpDownstream_h
 
 #include "Arduino.h"
-#include <Base64> 
+#include <Base64.h> 
 #include <ArduinoJson.h>
 #include <string.h>
 #include <Client.h>
